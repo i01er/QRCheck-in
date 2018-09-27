@@ -13,7 +13,7 @@
 
 <table style="width:100%">
   <tr>
-    <td id="1">1</td>
+    <td id="scannedTextMemo">1</td>
     <td id="2">2</td> 
   </tr>
   <tr>
@@ -32,7 +32,7 @@
 document.getElementById("QR").addEventListener("click", Change);
 
 function Change() {
-    document.getElementById("1").innerHTML = scannedTextMemo;
+    document.getElementById("scannedTextMemo").innerHTML = "Yo!";
 }
 
 function onQRCodeScanned(scannedText)

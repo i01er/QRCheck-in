@@ -13,7 +13,7 @@
 
 <table style="width:100%">
   <tr>
-    <td id="scannedText">1</td>
+    <td id="1">1</td>
     <td id="2">2</td> 
   </tr>
   <tr>
@@ -29,10 +29,10 @@
 <button id="QR">Scan!</button>
 
 <script>
-document.getElementById("QR").addEventListener("click", onQRCodeScanned);
+document.getElementById("QR").addEventListener("click", Change);
 
 function Change() {
-    document.getElementById("Cam").innerHTML = "Yeah";
+    document.getElementById("1").innerHTML = scannedTextMemo;
 }
 
 function onQRCodeScanned(scannedText)

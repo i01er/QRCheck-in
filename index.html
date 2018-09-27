@@ -34,7 +34,7 @@
 document.getElementById("QR").addEventListener("click", Change);
 
 function Change() {
-    document.getElementById("scannedTextMemo").innerHTML = "Yo!";
+    document.getElementById("1").innerHTML = "Yo!";
 }
 
 function onQRCodeScanned(scannedText)
@@ -43,6 +43,11 @@ function onQRCodeScanned(scannedText)
       if(scannedTextMemo)
       {
         scannedTextMemo.value = scannedText;
+      }
+
+      if(scannedTextMemo == "Christopher")
+      {
+        document.getElementById("1").innerHTML = "Yahoo!"
       }
     }
   

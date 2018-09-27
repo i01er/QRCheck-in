@@ -76,3 +76,8 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.scanner {
+  width: 20%;
+  height: 20%;
+}

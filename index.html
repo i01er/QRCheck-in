@@ -4,11 +4,14 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript" src="./js/jsqrscanner.nocache.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
   <link type="text/css" rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 <h2>Check-in Record</h2>
+
+<h3 id="Notice">Running</h3>
 
 <div id="QRModal" class="modal">
   <div class="modal-content">
@@ -34,15 +37,22 @@
 </table>
 
 <button class="button" id="QRbutton" style="vertical-align:middle"><span>Scan QR Code</span></button>
+</body>
 
-<script>
-// document.getElementById("QR").addEventListener("click", Change);
 
-// function Change() {
-//     document.getElementById("1").innerHTML = "Yo!";
-// }
+<script type="text/javascript">
 
-// Get the modal
+if (typeof(Storage) !== "undefined")
+{
+  if(localStorage.Booth1)document.getElementById("1").innerHTML = localStorage.Booth1;
+}
+else
+{
+  // Sorry! No Web Storage support..
+  document.getElementById("Notice").innerHTML = "Error";
+}
+
+  // Get the modal
 var modal = document.getElementById('QRModal');
 
 // Get the button that opens the modal
@@ -67,42 +77,5 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
-function onQRCodeScanned(scannedText)
-    {
-      var scannedTextMemo = document.getElementById("scannedTextMemo");
-      if(scannedTextMemo)
-      {
-        scannedTextMemo.value = scannedText;
-
-          if(scannedTextMemo.value == "Chocolate")
-          {
-            document.getElementById("1").innerHTML = scannedTextMemo.value;
-          }
-
-          if(scannedTextMemo.value == "Candy")
-          {
-            document.getElementById("2").innerHTML = scannedTextMemo.value;
-          }
-      }
-    }
-  
-    //this function will be called when JsQRScanner is ready to use
-function JsQRScannerReady()
-    {
-        //create a new scanner passing to it a callback function that will be invoked when
-        //the scanner succesfully scan a QR code
-        var jbScanner = new JsQRScanner(onQRCodeScanned);
-        //reduce the size of analyzed images to increase performance on mobile devices
-        jbScanner.setSnapImageMaxSize(300);
-      var scannerParentElement = document.getElementById("scanner");
-      if(scannerParentElement)
-      {
-          //append the jbScanner to an existing DOM element
-        jbScanner.appendTo(scannerParentElement);
-      }        
-    }
 </script>
-</body>
-
 </html>

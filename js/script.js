@@ -26,27 +26,67 @@ function onQRCodeScanned(scannedText)
 
           if(scannedTextMemo.value == "Rose")
           {
-            document.getElementById("2").innerHTML = scannedTextMemo.value;
+            if (typeof(Storage) !== "undefined") {
+                // Code for localStorage/sessionStorage.
+                localStorage.Booth2 = scannedTextMemo.value;
+                document.getElementById("2").innerHTML = localStorage.Booth2;
+            }
+            else {
+                // Sorry! No Web Storage support..
+                document.getElementById("2").innerHTML = "Error";
+            }
           }
 
           if(scannedTextMemo.value == "Jasmine")
           {
-            document.getElementById("3").innerHTML = scannedTextMemo.value;
+            if (typeof(Storage) !== "undefined") {
+                // Code for localStorage/sessionStorage.
+                localStorage.Booth3 = scannedTextMemo.value;
+                document.getElementById("3").innerHTML = localStorage.Booth3;
+            }
+            else {
+                // Sorry! No Web Storage support..
+                document.getElementById("3").innerHTML = "Error";
+            }
           }
 
           if(scannedTextMemo.value == "Lily")
           {
-            document.getElementById("4").innerHTML = scannedTextMemo.value;
+            if (typeof(Storage) !== "undefined") {
+                // Code for localStorage/sessionStorage.
+                localStorage.Booth4 = scannedTextMemo.value;
+                document.getElementById("4").innerHTML = localStorage.Booth4;
+            }
+            else {
+                // Sorry! No Web Storage support..
+                document.getElementById("4").innerHTML = "Error";
+            }
           }
 
           if(scannedTextMemo.value == "Sakura")
           {
-            document.getElementById("5").innerHTML = scannedTextMemo.value;
+            if (typeof(Storage) !== "undefined") {
+                // Code for localStorage/sessionStorage.
+                localStorage.Booth5 = scannedTextMemo.value;
+                document.getElementById("5").innerHTML = localStorage.Booth5;
+            }
+            else {
+                // Sorry! No Web Storage support..
+                document.getElementById("5").innerHTML = "Error";
+            }
           }
 
           if(scannedTextMemo.value == "Tulip")
           {
-            document.getElementById("6").innerHTML = scannedTextMemo.value;
+            if (typeof(Storage) !== "undefined") {
+                // Code for localStorage/sessionStorage.
+                localStorage.Booth6 = scannedTextMemo.value;
+                document.getElementById("6").innerHTML = localStorage.Booth6;
+            }
+            else {
+                // Sorry! No Web Storage support..
+                document.getElementById("6").innerHTML = "Error";
+            }
           }
       }
     }
@@ -58,7 +98,7 @@ function JsQRScannerReady()
         //the scanner succesfully scan a QR code
         var jbScanner = new JsQRScanner(onQRCodeScanned);
         //reduce the size of analyzed images to increase performance on mobile devices
-        jbScanner.setSnapImageMaxSize(300);
+        jbScanner.setSnapImageMaxSize(100);
       var scannerParentElement = document.getElementById("scanner");
       if(scannerParentElement)
       {

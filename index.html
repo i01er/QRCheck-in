@@ -42,15 +42,13 @@
 
 <script type="text/javascript">
 
-if (typeof(Storage) !== "undefined")
-{
-  if(localStorage.Booth1)document.getElementById("1").innerHTML = localStorage.Booth1;
-}
-else
-{
-  // Sorry! No Web Storage support..
-  document.getElementById("Notice").innerHTML = "Error";
-}
+//Checking data form html5 data storage
+if(localStorage.Booth1)document.getElementById("1").innerHTML = localStorage.Booth1;
+if(localStorage.Booth2)document.getElementById("2").innerHTML = localStorage.Booth2;
+if(localStorage.Booth3)document.getElementById("3").innerHTML = localStorage.Booth3;
+if(localStorage.Booth4)document.getElementById("4").innerHTML = localStorage.Booth4;
+if(localStorage.Booth5)document.getElementById("5").innerHTML = localStorage.Booth5;
+if(localStorage.Booth6)document.getElementById("6").innerHTML = localStorage.Booth6;
 
   // Get the modal
 var modal = document.getElementById('QRModal');

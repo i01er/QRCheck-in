@@ -17,6 +17,7 @@ function onQRCodeScanned(scannedText)
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth1 = scannedTextMemo.value;
                 // document.getElementById("1").innerHTML = localStorage.Booth1;
+                document.getElementById("img001").style.display = "block";
             }
             else {
                 // Sorry! No Web Storage support..
@@ -30,6 +31,7 @@ function onQRCodeScanned(scannedText)
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth2 = scannedTextMemo.value;
                 // document.getElementById("2").innerHTML = localStorage.Booth2;
+                document.getElementById("img002").style.display = "block";
             }
             else {
                 // Sorry! No Web Storage support..
@@ -43,6 +45,7 @@ function onQRCodeScanned(scannedText)
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth3 = scannedTextMemo.value;
                 // document.getElementById("3").innerHTML = localStorage.Booth3;
+                document.getElementById("img003").style.display = "block";
             }
             else {
                 // Sorry! No Web Storage support..
@@ -56,6 +59,7 @@ function onQRCodeScanned(scannedText)
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth4 = scannedTextMemo.value;
                 // document.getElementById("4").innerHTML = localStorage.Booth4;
+                document.getElementById("img004").style.display = "block";
             }
             else {
                 // Sorry! No Web Storage support..
@@ -69,6 +73,7 @@ function onQRCodeScanned(scannedText)
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth5 = scannedTextMemo.value;
                 // document.getElementById("5").innerHTML = localStorage.Booth5;
+                document.getElementById("img005").style.display = "block";
             }
             else {
                 // Sorry! No Web Storage support..
@@ -82,6 +87,7 @@ function onQRCodeScanned(scannedText)
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth6 = scannedTextMemo.value;
                 // document.getElementById("6").innerHTML = localStorage.Booth6;
+                document.getElementById("img006").style.display = "block";
             }
             else {
                 // Sorry! No Web Storage support..
@@ -98,7 +104,7 @@ function JsQRScannerReady()
         //the scanner succesfully scan a QR code
         var jbScanner = new JsQRScanner(onQRCodeScanned);
         //reduce the size of analyzed images to increase performance on mobile devices
-        jbScanner.setSnapImageMaxSize(100);
+        jbScanner.setSnapImageMaxSize(300);
       var scannerParentElement = document.getElementById("scanner");
       if(scannerParentElement)
       {

@@ -16,11 +16,11 @@ function onQRCodeScanned(scannedText)
             if (typeof(Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth1 = scannedTextMemo.value;
-                document.getElementById("1").innerHTML = localStorage.Booth1;
+                // document.getElementById("1").innerHTML = localStorage.Booth1;
             }
             else {
                 // Sorry! No Web Storage support..
-                document.getElementById("1").innerHTML = "Error";
+                document.getElementById("Notice").innerHTML = "Error";
             }
           }
 
@@ -29,11 +29,11 @@ function onQRCodeScanned(scannedText)
             if (typeof(Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth2 = scannedTextMemo.value;
-                document.getElementById("2").innerHTML = localStorage.Booth2;
+                // document.getElementById("2").innerHTML = localStorage.Booth2;
             }
             else {
                 // Sorry! No Web Storage support..
-                document.getElementById("2").innerHTML = "Error";
+                document.getElementById("Notice").innerHTML = "Error";
             }
           }
 
@@ -42,11 +42,11 @@ function onQRCodeScanned(scannedText)
             if (typeof(Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth3 = scannedTextMemo.value;
-                document.getElementById("3").innerHTML = localStorage.Booth3;
+                // document.getElementById("3").innerHTML = localStorage.Booth3;
             }
             else {
                 // Sorry! No Web Storage support..
-                document.getElementById("3").innerHTML = "Error";
+                document.getElementById("Notice").innerHTML = "Error";
             }
           }
 
@@ -55,11 +55,11 @@ function onQRCodeScanned(scannedText)
             if (typeof(Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth4 = scannedTextMemo.value;
-                document.getElementById("4").innerHTML = localStorage.Booth4;
+                // document.getElementById("4").innerHTML = localStorage.Booth4;
             }
             else {
                 // Sorry! No Web Storage support..
-                document.getElementById("4").innerHTML = "Error";
+                document.getElementById("Notice").innerHTML = "Error";
             }
           }
 
@@ -68,11 +68,11 @@ function onQRCodeScanned(scannedText)
             if (typeof(Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth5 = scannedTextMemo.value;
-                document.getElementById("5").innerHTML = localStorage.Booth5;
+                // document.getElementById("5").innerHTML = localStorage.Booth5;
             }
             else {
                 // Sorry! No Web Storage support..
-                document.getElementById("5").innerHTML = "Error";
+                document.getElementById("Notice").innerHTML = "Error";
             }
           }
 
@@ -81,11 +81,11 @@ function onQRCodeScanned(scannedText)
             if (typeof(Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
                 localStorage.Booth6 = scannedTextMemo.value;
-                document.getElementById("6").innerHTML = localStorage.Booth6;
+                // document.getElementById("6").innerHTML = localStorage.Booth6;
             }
             else {
                 // Sorry! No Web Storage support..
-                document.getElementById("6").innerHTML = "Error";
+                document.getElementById("Notice").innerHTML = "Error";
             }
           }
       }

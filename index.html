@@ -21,34 +21,75 @@
   </div>
 </div>
 
-<table style="width:100%">
+<div style="overflow-x:auto;">
+<table>
   <tr>
-    <td id="1">1</td>
-    <td id="2">2</td> 
+    <td id="1"><img src="./img/Lavender.png" width="70" height="70" id="img001" class="hidden"></td>
+    <td id="2"><img src="./img/Rose.png" width="70" height="70" id="img002" class="hidden"></td> 
   </tr>
   <tr>
-    <td id="3">3</td>
-    <td id="4">4</td>
+    <td id="3"><img src="./img/Jasmine.png" width="70" height="70" id="img003" class="hidden"></td>
+    <td id="4"><img src="./img/Lily.png" width="70" height="70" id="img004" class="hidden"></td>
   </tr>
   <tr>
-    <td id="5">5</td>
-    <td id="6">6</td>
+    <td id="5"><img src="./img/Sakura.png" width="70" height="70" id="img005" class="hidden"></td>
+    <td id="6"><img src="./img/Tulip.png" width="70" height="70" id="img006" class="hidden"></td>
   </tr>
 </table>
+</div>
+
+<br><br>
 
 <button class="button" id="QRbutton" style="vertical-align:middle"><span>Scan QR Code</span></button>
+<br><br>
+<button class="button" id="Showbutton" style="vertical-align:middle"><span>Show</span></button>
+<br><br>
+<button class="button" id="Resetbutton" style="vertical-align:middle"><span>Reset</span></button>
 </body>
 
 
 <script type="text/javascript">
 
 //Checking data form html5 data storage
-if(localStorage.Booth1)document.getElementById("1").innerHTML = localStorage.Booth1;
-if(localStorage.Booth2)document.getElementById("2").innerHTML = localStorage.Booth2;
-if(localStorage.Booth3)document.getElementById("3").innerHTML = localStorage.Booth3;
-if(localStorage.Booth4)document.getElementById("4").innerHTML = localStorage.Booth4;
-if(localStorage.Booth5)document.getElementById("5").innerHTML = localStorage.Booth5;
-if(localStorage.Booth6)document.getElementById("6").innerHTML = localStorage.Booth6;
+// if(localStorage.Booth1)document.getElementById("1").innerHTML = localStorage.Booth1;
+// if(localStorage.Booth2)document.getElementById("2").innerHTML = localStorage.Booth2;
+// if(localStorage.Booth3)document.getElementById("3").innerHTML = localStorage.Booth3;
+// if(localStorage.Booth4)document.getElementById("4").innerHTML = localStorage.Booth4;
+// if(localStorage.Booth5)document.getElementById("5").innerHTML = localStorage.Booth5;
+// if(localStorage.Booth6)document.getElementById("6").innerHTML = localStorage.Booth6;
+
+if(localStorage.Booth1 == "Lavender") document.getElementById("img001").style.display = "block";
+if(localStorage.Booth2 == "Rose")     document.getElementById("img002").style.display = "block";
+if(localStorage.Booth3 == "Jasmine")  document.getElementById("img003").style.display = "block";
+if(localStorage.Booth4 == "Lily")     document.getElementById("img004").style.display = "block";
+if(localStorage.Booth5 == "Sakura")   document.getElementById("img005").style.display = "block";
+if(localStorage.Booth6 == "Tulip")    document.getElementById("img006").style.display = "block";
+
+var btn2 = document.getElementById("Showbutton");
+
+btn2.onclick = function() {
+  localStorage.Booth1 = "Lavender";
+  localStorage.Booth2 = "Rose";
+  localStorage.Booth3 = "Jasmine";
+  localStorage.Booth4 = "Lily";
+  localStorage.Booth5 = "Sakura";
+  localStorage.Booth6 = "Tulip";
+
+  location.reload();
+}
+
+var btn3 = document.getElementById("Resetbutton");
+
+btn3.onclick = function() {
+  localStorage.removeItem("Booth1");
+  localStorage.removeItem("Booth2");
+  localStorage.removeItem("Booth3");
+  localStorage.removeItem("Booth4");
+  localStorage.removeItem("Booth5");
+  localStorage.removeItem("Booth6");
+
+  location.reload();
+}
 
   // Get the modal
 var modal = document.getElementById('QRModal');
@@ -61,12 +102,12 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal 
 btn.onclick = function() {
-    modal.style.display = "block";
+  modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    modal.style.display = "none";
+  modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
